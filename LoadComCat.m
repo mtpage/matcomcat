@@ -24,7 +24,7 @@ function [year, month, day, hour, minute, sec, lat, long, depth, mag, magType] =
 %
 %        Authors: Morgan Page and Justin Rubinstein
 %                 U. S. Geological Survey
-%        Last modified: March 2015
+%        Last modified: May 2015
   
 
 if(isempty(varargin))
