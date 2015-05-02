@@ -6,7 +6,7 @@ used to search the ANSS ComCat Earthquake Catalog.  It currently consists of one
 is a wrapper around the ANSS ComCat search  <a href="http://comcat.cr.usgs.gov/fdsnws/event/1/">API</a>, and
 two functions:
 
-- LoadComCat which does a search with fewer input parameters.
+- LoadComCat which batch queries ComCat searches to circumvent the 20,000 event limit.
 - readcomcat which parses the CSV output by the ComCat web site into a structure array. 
 
 Installation and Dependencies
