@@ -1,6 +1,6 @@
 classdef LibComCat
     %This class is a wrapper around the ComCat search API:
-    %http://comcat.cr.usgs.gov/fdsnws/event/1/
+    %http://earthquake.usgs.gov/fdsnws/event/1/
     %It provides methods for retrieving data from ComCat.
     %
     % getCatalogs - Retrieve a cell array of available product catalogs.
@@ -70,7 +70,7 @@ classdef LibComCat
     methods
         function obj = LibComCat()
             %Create a LibComCat object
-            obj.baseurl = 'http://comcat.cr.usgs.gov/fdsnws/event/1/[METHOD[?PARAMETERS]]';
+            obj.baseurl = 'http://earthquake.usgs.gov/fdsnws/event/1/[METHOD[?PARAMETERS]]';
         end
         function catalogs = getCatalogs(obj)
             url = strrep(obj.baseurl,'[METHOD[?PARAMETERS]]','catalogs');
