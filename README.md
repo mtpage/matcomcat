@@ -3,7 +3,7 @@ Introduction
 
 matcomcat is a Matlab package, intended (initially) as a demonstration of Matlab code
 used to search the ANSS ComCat Earthquake Catalog.  It currently consists of one class, LibComCat, which
-is a wrapper around the ANSS ComCat search  <a href="http://comcat.cr.usgs.gov/fdsnws/event/1/">API</a>, and
+is a wrapper around the ANSS ComCat search  <a href="http://earthquake.usgs.gov/fdsnws/event/1/">API</a>, and
 two functions:
 
 - LoadComCat which batch queries ComCat searches to circumvent the 20,000 event limit.
@@ -48,7 +48,7 @@ For either of the other two methods, uninstall as above and reinstall using your
 Usage
 ------------
 <pre>This class is a wrapper around the ComCat search API:
- http://comcat.cr.usgs.gov/fdsnws/event/1/
+ http://earthquake.usgs.gov/fdsnws/event/1/
  It provides methods for retrieving data from ComCat.
  
   getCatalogs - Retrieve a cell array of available product catalogs.
@@ -106,10 +106,10 @@ LoadComCat         Batch query ComCat searches to get around NEIC 20,000 event l
          be sorted in time, from oldest to newest events.
  
          Uses the ComCat search API.  For more info see: 
-         http://comcat.cr.usgs.gov/fdsnws/event/1/
+         http://earthquake.usgs.gov/fdsnws/event/1/
  
          Author: Morgan Page, U. S. Geological Survey
-         Last modified: March 2014
+         Last modified: May 2014
 </pre>
 
 <pre>
