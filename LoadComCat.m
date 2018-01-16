@@ -20,7 +20,7 @@ function [year, month, day, hour, minute, sec, lat, long, depth, mag, magType] =
 %        be sorted in time, from oldest to newest events.
 %
 %        Uses the ComCat search API.  For more info see: 
-%        http://comcat.cr.usgs.gov/fdsnws/event/1/
+%        https://earthquake.usgs.gov/fdsnws/event/1/
 %
 %        Authors: Morgan Page and Justin Rubinstein
 %                 U. S. Geological Survey
@@ -36,7 +36,7 @@ end
   
 
 % URL for ComCat "count" method
-url='http://earthquake.usgs.gov/fdsnws/event/1/count';
+url='https://earthquake.usgs.gov/fdsnws/event/1/count';
 clear params;
 params{1}='starttime'; params{3}= 'endtime'; 
 params{5}='minmagnitude';  params{6}= num2str(minMagnitude);
@@ -83,7 +83,7 @@ end
 % Now batch load catalogs!
 
 % URL for ComCat "query" method
-url='http://earthquake.usgs.gov/fdsnws/event/1/query';
+url='https://earthquake.usgs.gov/fdsnws/event/1/query';
 params{end+1}='format'; params{end+1}='csv';
 params{end+1}='orderby'; params{end+1}='time-asc';
   
