@@ -90,26 +90,32 @@ Usage
 </pre>
 
 <pre>
-LoadComCat         Batch query ComCat searches to get around NEIC 20,000 event limit
-         [YEAR, MONTH, DAY, HOUR, MINUTE, SEC, LAT, LONG, DEPTH,
-         MAG, MAGTYPE] = LoadComCat(STARTTIME,ENDTIME,MINMAGNITUDE)
-         returns results of catalog search within the time frame
-         STARTTIME and ENDTIME, for events with magnitude 
-         greater than MINMAGNITUDE.
- 
-         STARTTIME and ENDTIME must be entered in serial date
-         number format, e.g. STARTTIME = datenum('2014-01-01 00:00:00')
-  
-         For searches that will return more than 20,000 events,
-         this code will perform multiple ComCat searches, in
-         series, and return the aggregated results.  Results will
-         be sorted in time, from oldest to newest events.
- 
-         Uses the ComCat search API.  For more info see: 
-         http://earthquake.usgs.gov/fdsnws/event/1/
- 
-         Author: Morgan Page, U. S. Geological Survey
-         Last modified: May 2014
+LOADCOMCAT         Batch query ComCat searches to get around NEIC 20,000 event limit
+        [YEAR, MONTH, DAY, HOUR, MINUTE, SEC, LAT, LONG, DEPTH,
+        MAG, MAGTYPE] = LOADCOMCAT(STARTTIME,ENDTIME,MINMAGNITUDE)
+        returns results of a global catalog search within the time
+        frame STARTTIME and ENDTIME, for events with magnitude
+        greater than MINMAGNITUDE.
+
+        [YEAR, MONTH, DAY, HOUR, MINUTE, SEC, LAT, LONG, DEPTH,
+        MAG, MAGTYPE] = LOADCOMCAT(STARTTIME,ENDTIME,MINMAGNITUDE,
+        [MINLAT MAXLAT MINLON MAXLON]) performs a search within the
+        specified lat/long box.
+
+        STARTTIME and ENDTIME must be entered in serial date
+        number format, e.g. STARTTIME = datenum('2014-01-01 00:00:00')
+
+        For searches that will return more than 20,000 events,
+        this code will perform multiple ComCat searches, in
+        series, and return the aggregated results.  Results will
+        be sorted in time, from oldest to newest events.
+
+        Uses the ComCat search API.  For more info see: 
+        https://earthquake.usgs.gov/fdsnws/event/1/
+
+        Authors: Morgan Page and Justin Rubinstein
+                 U. S. Geological Survey
+        Last modified: May 2015
 </pre>
 
 <pre>
